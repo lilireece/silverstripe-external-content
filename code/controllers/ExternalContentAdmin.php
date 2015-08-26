@@ -674,6 +674,9 @@ class ExternalContentAdmin extends LeftAndMain implements CurrentPageIdentifier,
 	
 	public function updatetreenodes($request) {
 		// noop
+		if(!$request->getVar('ids')){
+            		return false;
+        	}
 		return parent::updatetreenodes($request);
 	}
 
